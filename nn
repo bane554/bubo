@@ -1,0 +1,18 @@
+ if($select){
+                $images = scandir('./images/'.$select);
+
+                if($images){
+                    array_shift($images);
+                    array_shift($images);    
+
+                    echo '<ul>';
+                    foreach($images as $image){
+                        echo '<li><img src="./images/'.$select.'/'.$image.'"height="50"></li>';
+
+                    }
+                    echo '</ul>';
+                }
+            }
+
+        ?>
+    </ul>
