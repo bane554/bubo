@@ -1,0 +1,19 @@
+<ul class="header-ul">
+        <?php
+
+            foreach($folders as $folder){
+
+                $filters = ['_', '-', '~'];
+
+                $clean = str_replace($filters, ' ', $folder);
+                
+                $clean = ucfirst($clean);
+
+
+                $class = '';
+                if($select == $folder){
+                    $class = 'active';
+                }
+
+                echo '<li><a class="'.$class.'" href="?folder='.$folder.'">'.$clean.'</a></li>';
+            }
